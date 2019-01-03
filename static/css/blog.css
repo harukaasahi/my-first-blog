@@ -1,0 +1,58 @@
+body{
+    background-color : #F5DAB5;
+    /*ページ全体の背景色*/
+    margin: 0px;
+    /*marginは要素の外側の余白を設定*/
+    padding: 0px;
+    /*paddingは要素の内側の余白を設定*/
+    /*左サイドの余白幅を少し広げて余裕を持たせる*/
+    }
+
+h1 a{
+    color: #E0673F;
+    }
+/*h1要素の中にあるa要素(<h1><a></a></h1>の中身)全てにこの色を適用*/
+
+.content {
+    margin-left: 40px;
+}
+
+.page-header h1{
+    font-family: 'Lobster';
+    background-color: #b1e0a7;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    font-size: 30px;
+}
+
+.post h1{
+    font-family: verdana;
+    font-size: 20px;
+    margin-left: -5px;
+}
+
+p {
+    font-family: verdana;
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+} 
+
+  /*カラーコードは http://www.colorpicker.com/ から検索可能*/
+  /*タグ(要素)の名称は https://www.w3schools.com/cssref/css_selectors.asp から検索可能*/
+
+.date {
+    color: #747171;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
