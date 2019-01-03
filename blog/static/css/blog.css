@@ -56,3 +56,14 @@ p {
     margin-right: 20px;
 }
 
+.sampleBox {
+    border:0px solid #cccccc;
+    height: 50px;
+    position: relative;
+}
+
+.sampleBox img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
