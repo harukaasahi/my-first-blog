@@ -1,35 +1,18 @@
-<html>
-    <!--コンテンツはhtmlタグの中に書く.-->
-    <head>
-        <title>My Blog</title>
-    </head>
-    <!--headの中身は本文中に記載されない-->
-    <!--bodyの中身は文章中に表示される.-->
-    <body>
-        <div>
-            <h1><a href="/">Welcome to My Blog</a></h1>
-            <!--最も重要性の高い見出し.ヘッダー.-->
-        </div>
+{% extends 'blog/base.html' %}
+<!--テンプレートbase.htmlを拡張する-->
 
-        <div>
-            <p>公開日: 2018/12/29, 18:00</p>
-            <!--<p></p>で囲まれたところが一つの段落-->
-            <h2><a href="">My First Post</a></h2>
-            <h2>は次に重要性の高い見出し.サブヘッダー.
-            <p> こんにちは！ よろしくお願いします！ </p>
+{% block content %}
+    {% for post in posts %}
+    <div class="post">
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <!--""の中はテンプレートpost_detail(投稿の詳細ページ)へのリンク先-->
+        <!--<h2>は<h1>の次に重要性の高い見出し.サブヘッダー.-->
+        <p>{{ post.text|linebreaksbr }}</p>
+         <!--<p></p>で囲まれたところが一つの段落-->            
+        <div class="date">
+            publish:{{post.published_date}}
         </div>
-        
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
-
-        <div>
-            <p>公開日: 2018/12/29, 18:00</p>
-            <h2><a href="">My Second Post</a></h2>
-            <p> こんにちは！ よろしくお願いします！ </p>
-        </div>
-        <!--<div>はページ内のセクションを定義.-->
-    </body>
-</html>
+        <!--<div>はページ内のセクションを定義.-->        
+    </div>
+    {% endfor %}
+{% endblock %}
