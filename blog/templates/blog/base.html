@@ -17,8 +17,8 @@
         <div class="page-header">
             {% if user.is_authenticated %}
                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <!--管理者でログインしているユーザーのみに投稿作成のリンクを表示する-->
+           {% endif %}
+           <!--管理者でログインしているユーザーのみに投稿作成のリンクを表示する-->
             <h1><a href="/">Welcome to My Blog</a></h1>
             <!--最も重要性の高い見出し.ヘッダー.-->
         </div>
