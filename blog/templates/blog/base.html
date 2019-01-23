@@ -1,12 +1,12 @@
-{% load staticfiles %}
+{% load static %}
 <!--CSSを追加したことをHTMLテンプレートに教える-->
 <html>
     <!--コンテンツはhtmlタグの中に書く.-->
     <head>
         <title>My Blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <!--この上二つはBootstrapをインストールするためのもの-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <!--この上二つはBootstrapをインストールするためのもの-->
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <!--Lobster というフォントをGoogle Fontsから読み込む-->
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
